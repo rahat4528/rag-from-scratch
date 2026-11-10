@@ -23,6 +23,9 @@ __pycache__/
 # Vector stores & local databases
 chroma_data/
 chroma_db/
+chroma_db_demo/
+course/notebooks/chroma_db/
+course/notebooks/*.json
 *.chroma/
 *.duckdb
 
