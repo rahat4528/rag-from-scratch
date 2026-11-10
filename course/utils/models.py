@@ -172,6 +172,57 @@ class LocalGroundedChatModel(BaseChatModel):
         # Default grounded response using context snippets
         return f"Based on the provided context: {context[:250].strip()}..."
 
+    def with_structured_output(self, schema: Any, **kwargs: Any) -> Any:
+        from langchain_core.runnables import RunnableLambda
+        from pydantic import BaseModel
+
+        def _parse(input_val: Any) -> Any:
+            # Extract query text
+            if isinstance(input_val, list):
+                text = " ".join([m.content for m in input_val if hasattr(m, "content")])
+            elif hasattr(input_val, "to_string"):
+                text = input_val.to_string()
+            else:
+                text = str(input_val)
+            text_lower = text.lower()
+
+            if isinstance(schema, type) and issubclass(schema, BaseModel):
+                data = {}
+                fields = schema.model_fields if hasattr(schema, "model_fields") else {}
+                
+                # Routing schemas
+                if "datasource" in fields or "destination" in fields:
+                    field_name = "datasource" if "datasource" in fields else "destination"
+                    if any(w in text_lower for w in ["handbook", "policy", "meal", "pet", "expense", "stipend", "travel", "vacation"]):
+                        data[field_name] = "handbook"
+                    elif any(w in text_lower for w in ["changelog", "update", "release", "october", "latency", "v1"]):
+                        data[field_name] = "changelog"
+                    elif any(w in text_lower for w in ["faq", "ros2", "error", "timeout", "udp", "port"]):
+                        data[field_name] = "faq"
+                    else:
+                        data[field_name] = "handbook"
+
+                # Filter schemas for query construction
+                if "filters" in fields or "product" in fields:
+                    if "product" in fields:
+                        data["product"] = "HyperSync" if "hypersync" in text_lower else "ZeroGravity"
+                    if "date" in fields:
+                        data["date"] = "2026-10"
+
+                # Binary score schemas
+                if "score" in fields or "binary_score" in fields:
+                    f_score = "score" if "score" in fields else "binary_score"
+                    data[f_score] = "yes"
+
+                try:
+                    return schema(**data)
+                except Exception:
+                    return schema.model_construct(**data)
+            return {"raw_output": text}
+
+        return RunnableLambda(_parse)
+
+
 
 def detect_provider() -> str:
     """Detect configured provider from environment variables."""
