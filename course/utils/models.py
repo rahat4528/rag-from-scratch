@@ -108,8 +108,8 @@ class LocalGroundedChatModel(BaseChatModel):
         question = human_match.group(1).strip() if human_match else prompt
         q_lower = question.lower()
 
-        # Extract retrieved context
-        context_match = re.search(r"context:\s*(.*?)(?:\nHUMAN:|\nUSER:|\n\nuser:|$)", prompt, re.DOTALL | re.IGNORECASE)
+        # Extract retrieved context (supports both 'CONTEXT:' and '<context>...</context>' tags)
+        context_match = re.search(r"(?:context:|<context>)\s*(.*?)(?:</context>|\nHUMAN:|\nUSER:|\n\nuser:|$)", prompt, re.DOTALL | re.IGNORECASE)
         context = context_match.group(1).strip() if context_match else ""
         ctx_lower = context.lower()
 
