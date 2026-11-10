@@ -1,0 +1,45 @@
+# NOVASPHERE DYNAMICS - EMPLOYEE HANDBOOK & OPERATIONAL POLICIES
+Document Version: 2026.3
+Last Revised: September 15, 2026
+
+1. WELCOME & CORE MISSION
+Novasphere Dynamics builds intelligent, quantum-inspired orchestration systems for autonomous industrial robotics and real-time sensor fleets. Our mission is to eliminate latency and operational failures in mission-critical environments.
+
+2. WORKPLACE POLICIES & REMOTE FLEXIBILITY
+- Work Locations: Novasphere is a remote-first organization. Employees may work from any location within +/- 4 time zones of their designated hub (Zurich, Neo-Tokyo, or San Francisco).
+- Core Collaboration Hours: All team members must be available on Slack and video during core collaboration hours: 13:00 to 16:00 Central European Time (CET).
+- Office Access & Security Badges: Physical offices require encrypted NFC badge entry. Badges must not be shared. Visitors must be registered 24 hours in advance via the Envoy portal.
+- Pet Policy: Pets are permitted in the Zurich hub on Tuesdays and Thursdays only. All pets must be registered with office facilities and have up-to-date vaccinations.
+
+3. EXPENSES, TRAVEL & LEARNING STIPEND
+- Meal Expense Limit: Employees traveling on company business are reimbursed up to $150 per day for meals without requiring prior VP approval. Single meals exceeding $150 require written approval from the department VP.
+- Home Office Setup: A one-time equipment grant of $1,500 is provided upon onboarding for ergonomic desks, monitors, and chairs.
+- Continuous Learning Stipend: Every full-time employee receives an annual learning stipend of $1,200. This may be used for technical books, conferences, certifications, and online courses.
+- Equipment Refresh: Laptops are refreshed every 24 months. Standard issue is either an Apple MacBook Pro M3/M4 Max or an ThinkPad P1 Gen 7 running Ubuntu Linux 24.04 LTS.
+
+4. PAID TIME OFF & WELLNESS
+- Vacation Allowance: Full-time employees receive 28 paid vacation days per calendar year, in addition to standard regional public holidays.
+- Wellness Days: Each quarter, the company observes one synchronous "Recharge Friday" where all internal meetings and non-critical deployments are paused.
+- Parental Leave: 18 weeks of fully paid parental leave is available to all primary and secondary caregivers following the birth, adoption, or foster placement of a child.
+
+5. CUSTOMER SUPPORT TIERS & OPERATING HOURS
+Novasphere provides tiered technical support for enterprise customers:
+- Standard Support (Included in Starter Tier):
+  * Availability: Monday through Friday, 09:00 - 17:00 CET.
+  * First Response Time Target: Within 8 business hours.
+  * Channels: Email and asynchronous support ticket portal.
+- Professional Support (Included in Professional Tier):
+  * Availability: Monday through Saturday, 08:00 - 20:00 CET.
+  * First Response Time Target: Within 2 hours for Severity-1 and Severity-2 incidents.
+  * Channels: Email, web portal, and dedicated Slack Connect channel.
+- Enterprise 24/7 Mission-Critical Support (Included in Enterprise Tier):
+  * Availability: 24 hours a day, 7 days a week, 365 days a year (24/7/365).
+  * First Response Time Target: Within 15 minutes for Severity-1 outages; within 1 hour for Severity-2 issues.
+  * Channels: Dedicated hotline, pager escalation, Slack Connect, and assigned Technical Account Manager (TAM).
+
+6. COMMERCIAL PRICING PLANS
+All billing is charged monthly or annually (with a 15% discount for annual upfront commitments):
+- Starter Plan: $499 per month. Supports up to 10 active autonomous robot/drone nodes. Includes standard telemetry and 30-day log retention.
+- Professional Plan: $1,850 per month. Supports up to 50 active nodes. Includes HyperSync protocol, 90-day telemetry retention, and dedicated Slack Connect support.
+- Enterprise Plan: $4,200 per month. Supports up to 200 active nodes. Includes ZeroGravity automatic failover, QuantumCache v4, 1-year telemetry retention, and 24/7/365 support.
+- Custom Ultra-Tier Plan: $12,500 per month. Designed for fleets exceeding 200 nodes (up to 1,000 nodes). Includes custom on-premise edge deployments and dedicated solutions engineering.

@@ -1,0 +1,33 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables & secrets
+.env
+*.env
+!course/.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Jupyter Notebook checkpoints & caches
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Vector stores & local databases
+chroma_data/
+chroma_db/
+*.chroma/
+*.duckdb
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
